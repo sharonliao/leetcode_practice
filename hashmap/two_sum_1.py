@@ -19,3 +19,8 @@ class Solution(object):
                 return [index,remain_dict.get(value)]
             else:
                 remain_dict[target-value] = index;
+
+nums = [-1,0,1,2,-1,-4]
+
+
+
