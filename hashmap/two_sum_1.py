@@ -16,6 +16,7 @@ class Solution(object):
         remain_dict = {}
         for index,value in enumerate(nums):
             if remain_dict.get(value) is not None:
+                # this value is a remainder for a value in the hashmap
                 return [index,remain_dict.get(value)]
             else:
                 remain_dict[target-value] = index;
