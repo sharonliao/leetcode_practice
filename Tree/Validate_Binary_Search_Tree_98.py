@@ -76,3 +76,37 @@ class Solution(object):
             return validate(root)
 
 
+        def isValidBST_inorder(self, root):
+            #inorder
+            if not self.inorder_check(root):
+                return False
+            else:
+                return True
+
+        prev = -2147483649
+
+        def inorder_check(self,root):
+            if root.left is not None:
+                if self.inorder_check(root.left) is False:
+                    return False;
+            if self.prev >= root.val:
+                return False
+            else:
+                self.prev = root.val
+            if root.right is not None:
+                if self.inorder_check(root.right) is False:
+                    return False;
+
+        def inorder_check_improve(self,root):
+            if not root:
+                return True
+            if not self.inorder_check(root.left):
+                    return False;
+            if self.prev >= root.val:
+                return False
+            else:
+                self.prev = root.val
+            if not self.inorder_check(root.right):
+                    return False;
+            return True
+
