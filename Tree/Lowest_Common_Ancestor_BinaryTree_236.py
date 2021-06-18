@@ -49,7 +49,7 @@ class Solution(object):
         :rtype: TreeNode
         """
         # bottom up
-        # 1. case 1: when a node, which's left child contains p(or q), and right child contains q(or p), then this node must be the lowestCommonAncestor
+        # 1. case 1: when a node, which left child contains p(or q), and right child contains q(or p), then this node must be the lowestCommonAncestor
         # 2. case 2: when a node, which is p, and its left child or right child contains q , then this node must be the lowestCommonAncestor
 
         def DFS(root):
