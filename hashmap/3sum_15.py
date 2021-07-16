@@ -7,7 +7,6 @@ class Solution(object):
         """
         remain_dict = {}
         for index1, value1 in enumerate(nums):
-
             for index2, value2 in enumerate(nums):
                 if index1 > index2:
                     if remain_dict.get(value1+value2) is None:
