@@ -180,3 +180,10 @@ class KthLargest(object):
             heapq.heapreplace(self.pool, val)
         # return pop
         return self.pool[0]
+
+
+# initial two dims list
+def initial_list():
+    l =10
+    w = 10
+    record = [[0] * l for i in range(w)]
