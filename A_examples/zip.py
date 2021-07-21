@@ -1,5 +1,7 @@
 # 用zip同时遍历两个iterator
 # 要求两个list的长度要一样，不然一个list耗尽zip就停止了
+# 如果按long的匹配怎么办
+
 names = ['cecilia', 'lise', 'marie']
 letters = [len(x) for x in names]
 max_letters = 0
@@ -11,7 +13,7 @@ for name, count in zip(names, letters):
 names.append('Rosalind')
 
 import itertools
-
+# 如果按long的匹配怎么办， zip_longest
 for name, count in itertools.zip_longest(names, letters):
     print(f"{name}:{count}")
 """

@@ -11,5 +11,5 @@ value_tuple = ((x, x * 2) for x in a)
 print(value)
 print(next(value))
 print(next(value_tuple))
-
 #
+

@@ -83,3 +83,4 @@ def test(S, T, U):
     exchange_amount = float(S) * exchange_map[exchange_method]
     exchange_amount_rounded = "{:.2f}".format(exchange_amount)
     return exchange_amount_rounded
+

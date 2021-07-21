@@ -57,3 +57,8 @@ print('b:     ', b)
 a:      ['a', 'b', 'c', 'e', 'f']
 b:      ['a', 'c', 'f']
 """
+
+# reversed
+b = a[::-2]
+print('a:     ', a)
+print('b:     ', b)

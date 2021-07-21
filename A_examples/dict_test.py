@@ -1,4 +1,5 @@
 import heapq
+import re
 
 count_dict = dict();
 
@@ -16,8 +17,26 @@ def dict_return_default_demo():
     count_dict["A"] = 23
     count_dict["B"] = 24
 
+    if "B" in count_dict:
+        b = count_dict["B"]
+        print(f"B = {b}")
+
     for key, value in count_dict.items():
         print(f"key:{key},vaule:{value}")
+
+    for key in count_dict:
+        print(f"loop dict ,key :{key}")
+
+    # max() return key
+    # dict get max() by value
+    key_for_max_value = max(count_dict, key=count_dict.get)
+    #  get max by key
+    key_max = max(count_dict)
+    print(f"max key value: {key_for_max_value} - {count_dict[key_for_max_value]}")
+    print(f"key_max: {key_max} - {count_dict[key_max]}")
+
+
+dict_return_default_demo()
 
 
 # comprehension
@@ -59,7 +78,11 @@ def segregate(arr, size):
         if (arr[i] <= 0):
             arr[i], arr[j] = arr[j], arr[i]
             j += 1  # increment count of non-positive integers
+    print(arr)
     return j
+
+
+segregate([4, -1, 4, -2, -5, -6], len([1, -1, 4, -2, -5, -6]))
 
 
 # 检查key是否在dict中
@@ -184,6 +207,44 @@ class KthLargest(object):
 
 # initial two dims list
 def initial_list():
-    l =10
+    l = 10
     w = 10
     record = [[0] * l for i in range(w)]
+
+
+def str_build_id_test():
+    str = "ss.ff.ee.234.11c2"
+    words = str.split('.')
+    print(words)
+    for w in words:
+        print(w.isdigit())
+
+
+def str_check_start_with_0():
+    s = "01x110"
+    # 1. check if this s is digit
+    # 2. if yes, then check if this s start with 0
+    if s.isdigit():
+        return str(int(s)) == s
+    else:
+        return False
+
+
+def test_list():
+    x = [1, 2, 3, 3]
+    print(x.index(1))
+    # How can you count duplicate elements in a given list?
+    count = x.count(3)
+
+
+# str_build_id_test()
+def ternary_test():
+    x, y = 25, 50
+    big = x if x < y else y
+
+def sorted_test():
+    intervals = [[1,3],[2,6],[8,10],[15,18]]
+    intervals = sorted(intervals,key=lambda x : x[0])
+
+
+str_check_start_with_0()

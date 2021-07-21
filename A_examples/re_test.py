@@ -1,14 +1,3 @@
-def solution(N):
-    # write your code in Python 3.6
-    result = []
-    if N % 2 == 1:
-        result.append(0)
-    for i in range(1,N//2+1):
-        result.append(i)
-        result.append(-i)
-    return result
-
-
 import re
 text = 'We test coders. Give us a try? Forget CVs..Save time !  X X'
 def solution2(S):
@@ -25,10 +14,17 @@ def solution2(S):
         # words = re.split('\s', sent)
         words = [x for x in re.split('\s', sent) if len(x)>0]
         max_cnt = max(max_cnt,len(words))
+    print(max_cnt)
     return max_cnt
 
 
-
+def str_check_start_with_0():
+    s = "01x110"
+    # 1. check if this s is digit
+    # 2. if yes, then check if this s start with 0
+    if s.isdigit():
+        return str(int(s)) == s
+    else:
+        return False
 
 solution2(text)
-
